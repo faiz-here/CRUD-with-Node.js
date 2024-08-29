@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+        a {
+            margin-top: 10px;
+            padding: 5px 10px;
+            background-color: blue;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-left: 5%;
+            height: 40px;
+            width: 150px;
+            font-size: 20px;
+            font-weight: 600;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .container {
+            margin-top: 2%;
+            width: 100%;
+            height: 100%;
+        }
+        input {
+            width: 50%;
+            height: 50px;
+            margin-top: 15px;
+            margin-left: 5%;
+            border-radius: 10px;
+            font-size: 20px;
+            padding-left: 3%;
+        }
+        #myname{
+            color: white;
+        }
+        button{
+            background-color: orange;
+            width: 10%;
+            height: 7vh;
+            border-radius: 10px;
+            margin-left: 5%;
+            margin-top: 15px;
+        }
+        @media only screen and (max-width: 768px){
+            input {
+            width: 80vw;
+            height: 50px;
+            margin-top: 15px;
+            margin-left: 5%;
+            border-radius: 10px;
+            font-size: 20px;
+            padding-left: 3%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border: none;
+        }
+        #myname{
+            color: black;
+        }
+        button{
+            background-color: orange;
+            width: 45vw;
+            height: 50px;
+            border-radius: 10px;
+            margin-left: 5%;
+            margin-top: 15px;
+            font-weight: 600;
+            font-size: 20px;
+            border: none;
+        }
+    }
+
+    </style>
+</head>
+
+<body>
+    <a href="/">go to home page</a>
+    <div class="container">
+        <form action="/newfilename" method="post" onsubmit="document.getElementById('myname').disabled = false;">
+            <input type="text" id="myname" name="filename" value="<%= oldfilename %>" disabled="true">
+            <input type="text" id="" name="newfilename" placeholder="Type new file name" autocomplete="off">
+            <div>
+                <button type="submit">Update</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
